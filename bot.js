@@ -20,11 +20,11 @@ var phraseArray = [ "Yeah baby I hear the blues a callin'",
                     "Scrambled eggs all over my face!",
                     "Ha-HA!"
                             ];
-
+// Now we setup a function, chooseRandom, which chooses a number between 0 and the total number of items in the array. The resulting number is then returned.
 const chooseRandom (myArray) => {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
-
+//We then assign the returned index value to a variable.
 var phrase = chooseRandom(phraseArray);
-
+//Finally, we run a method which is built-in to one of the packages (Twitterbot) that we required above. This method creates a tweet with the contents of the selected phrase.
 Bot.tweet(phrase);
